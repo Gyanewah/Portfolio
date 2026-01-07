@@ -3,28 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Josephine Gyasi | Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Josephine Gyasi - Software Engineer</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="skills.html">Skills</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header> 
-    
-    <main>
-        <section class="hero">
-            <h1>Hi, I'm Josephine</h1>
-            <p>I am a Master's student in software engineering in JUNIA ISEN. I love to make friends and have conversations. I also really love music, though I am not a fun of all genres. I am not the perfect and ideal student that people do expect but I have learnt to be content with my progress, to acknowledge my struggles and be consistent in becoming the woman I hope to be in the future.</p>
-        </section>
-    </main>
-    <footer>
-        © 2025 Josephine Gyasi
+<body class="dark-theme">
+    <nav class="dark-nav">
+        <div class="container nav-container">
+            <div class="logo">JG</div>
+            <ul class="nav-right-items">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero-dark">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content-split">
+                <div class="hero-text-left">
+                    <h1 class="hero-name"><span class="greeting">Hi, I'm </span><span class="name">Josephine</span></h1>
+                    <p class="hero-tagline">Master's student in Software Engineering with international experience</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn-outline">GET IN TOUCH</a>
+                        <a href="projects.html" class="btn-outline">CHECKOUT MY PROJECTS</a>
+                    </div>
+                </div>
+                
+                <div class="hero-image-right">
+                    <div class="profile-rounded-wide">
+                        <img src="images/PortPic.jpg" alt="Josephine Gyasi">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="skills-dark">
+        <div class="container">
+            <h2 class="section-title-dark centered">Technical Skills</h2>
+            
+            <div class="skills-category">
+                <h3 class="category-title">Languages</h3>
+                <div class="skills-grid-dark">
+                    <div class="skill-item-dark">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-item-dark">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                        <span>Java</span>
+                    </div>
+                    <div class="skill-item-dark">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item-dark">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="skill-item-dark">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                        <span>HTML</span>
+                    </div>
+                    <div class="skill-item-dark">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                        <span>CSS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="category-title">Frameworks & Libraries</h3>
+                <div class="skills-grid-dark">
+                    <div class="skill-item-dark">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                        <span>React</span>
+                    </div>
+                    <div class="skill-item-dark">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django">
+                        <span>Django</span>
+                    </div>
+                    <div class="skill-item-dark">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg" alt="NestJS">
+                        <span>NestJS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="category-title">Tools & Technologies</h3>
+                <div class="skills-grid-dark">
+                    <div class="skill-item-dark">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
+                        <span>VS Code</span>
+                    </div>
+                    <div class="skill-item-dark">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                        <span>Git</span>
+                    </div>
+                    <div class="skill-item-dark">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                        <span>GitHub</span>
+                    </div>
+                    <div class="skill-item-dark">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+                        <span>Figma</span>
+                    </div>
+                    <div class="skill-item-dark">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="skill-item-dark">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite">
+                        <span>SQLite</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-dark">
+        <div class="container">
+            <h2 class="section-title-dark centered">Why Hire Me?</h2>
+            <div class="values-grid-dark">
+                <div class="value-card-dark">
+                    <div class="value-icon-dark">💼</div>
+                    <h3>Leadership Experience</h3>
+                    <p>First Deputy Electoral Commissioner at ACES-KNUST, supervised elections and managed stakeholder education.</p>
+                </div>
+                <div class="value-card-dark">
+                    <div class="value-icon-dark">🤝</div>
+                    <h3>Team Collaboration</h3>
+                    <p>Strong teamwork skills demonstrated through committee work in financial and electoral roles.</p>
+                </div>
+                <div class="value-card-dark">
+                    <div class="value-icon-dark">💬</div>
+                    <h3>Communication Skills</h3>
+                    <p>Excellent communication and public relations abilities, managed social media and internal communications.</p>
+                </div>
+                <div class="value-card-dark">
+                    <div class="value-icon-dark">🎯</div>
+                    <h3>Problem Solver</h3>
+                    <p>Developed full-stack applications with clean architecture and scalable design patterns.</p>
+                </div>
+                <div class="value-card-dark">
+                    <div class="value-icon-dark">🏆</div>
+                    <h3>Award-Winning Student</h3>
+                    <p>Name on Chip Award and Vice-Chancellor's Students' Excellence Awards nominee.</p>
+                </div>
+                <div class="value-card-dark">
+                    <div class="value-icon-dark">🌍</div>
+                    <h3>International Experience</h3>
+                    <p>Cross-cultural experience studying in Ghana and France, fluent in English with basic French.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="dark-footer">
+        <div class="container">
+            <p>&copy; 2026 Josephine Gyasi. All rights reserved.</p>
+            <div class="social-links">
+                <a href="mailto:cecigyanewah@gmail.com" title="Email">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="24" rx="4" fill="#cea187"/>
+                        <path d="M6 8L12 13L18 8M6 8V16H18V8H6Z" stroke="#1a1410" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="https://linkedin.com/in/josephine-gyasi" target="_blank" title="LinkedIn">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="#0A66C2" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="4" fill="#0A66C2"/>
+                        <path d="M11.5 9.5C11.5 10.3284 10.8284 11 10 11C9.17157 11 8.5 10.3284 8.5 9.5C8.5 8.67157 9.17157 8 10 8C10.8284 8 11.5 8.67157 11.5 9.5Z" fill="white"/>
+                        <rect x="8.5" y="12.5" width="3" height="11.5" fill="white"/>
+                        <path d="M14 12.5H17V14.25C17.5 13 19 12.5 20.5 12.5C23 12.5 23.5 14.25 23.5 16.5V24H20.5V17.25C20.5 15.75 20 15 19 15C17.75 15 17 15.75 17 17.25V24H14V12.5Z" fill="white"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/Gyanewah" target="_blank" title="GitHub">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16 2C8.265 2 2 8.265 2 16C2 22.195 6.0075 27.4275 11.5725 29.2825C12.2725 29.4075 12.53 28.985 12.53 28.6175C12.53 28.285 12.5175 27.2575 12.5125 26.1725C8.77 26.9975 7.9625 24.5075 7.9625 24.5075C7.3275 22.885 6.4225 22.465 6.4225 22.465C5.17 21.6175 6.5175 21.635 6.5175 21.635C7.9025 21.7325 8.63 23.045 8.63 23.045C9.86 25.145 11.835 24.535 12.56 24.1825C12.685 23.29 13.0375 22.68 13.425 22.335C10.345 21.985 7.1025 20.8125 7.1025 15.4C7.1025 13.8625 7.6475 12.6075 8.66 11.6225C8.515 11.2725 8.055 9.89 8.795 8.005C8.795 8.005 9.945 7.6325 12.495 9.345C13.595 9.0375 14.795 8.8825 15.995 8.8775C17.195 8.8825 18.395 9.0375 19.495 9.345C22.045 7.6325 23.195 8.005 23.195 8.005C23.935 9.89 23.475 11.2725 23.33 11.6225C24.3475 12.6075 24.8875 13.8625 24.8875 15.4C24.8875 20.825 21.64 21.98 18.5525 22.32C19.0475 22.7425 19.4775 23.575 19.4775 24.8425C19.4775 26.665 19.4625 28.1325 19.4625 28.6175C19.4625 28.9875 19.7175 29.4125 20.4275 29.28C25.9875 27.4225 30 22.1925 30 16C30 8.265 23.735 2 16 2Z" fill="white"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
