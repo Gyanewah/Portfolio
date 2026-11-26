@@ -1,0 +1,120 @@
+.contact__card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: 0 2px 6px rgb(36 34 30 / 0.05), 0 24px 60px rgb(36 34 30 / 0.1);
+  overflow: hidden;
+}
+
+.contact__main,
+.contact__side {
+  padding: clamp(1.75rem, 4.5vw, 3.5rem);
+}
+
+/* thin vertical divider */
+.contact__side {
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact__headline {
+  font-size: clamp(2.6rem, 6.5vw, 5rem);
+  font-weight: 850;
+  font-stretch: 68%;
+  line-height: 0.92;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.contact__text {
+  margin-top: 1rem;
+  max-width: 32rem;
+  font-size: 1.08rem;
+}
+
+.contact__cta {
+  width: 100%;
+  margin-top: 2rem;
+  min-height: 56px;
+  font-size: 1.05rem;
+}
+
+.contact__label {
+  font: 500 0.72rem/1.4 var(--font-mono);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--secondary);
+}
+.contact__label--socials {
+  margin-top: auto;
+  padding-top: 2.5rem;
+}
+
+.contact__email {
+  margin-top: 0.6rem;
+  font: 500 clamp(0.95rem, 1.6vw, 1.15rem)/1.4 var(--font-mono);
+  color: var(--heading);
+  overflow-wrap: anywhere;
+}
+
+.contact__copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 44px;
+  margin-top: 1rem;
+  padding: 0.5rem 1.1rem;
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--accent);
+  font: 600 0.9rem/1 var(--font-sans);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+.contact__copy:hover,
+.contact__copy.is-copied {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.contact__socials {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.9rem 0 0;
+  padding: 0;
+}
+.contact__social {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid var(--secondary);
+  border-radius: 50%;
+  color: var(--secondary);
+  transition: background-color 0.2s, color 0.2s, transform 0.2s var(--ease-out);
+}
+.contact__social:hover {
+  background: var(--secondary);
+  color: var(--on-accent);
+  transform: translateY(-2px);
+}
+
+/* Mobile: stack, divider becomes horizontal */
+@media (max-width: 767px) {
+  .contact__card {
+    grid-template-columns: 1fr;
+  }
+  .contact__side {
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+  .contact__label--socials {
+    padding-top: 2rem;
+  }
+}

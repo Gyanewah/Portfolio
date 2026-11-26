@@ -1,0 +1,206 @@
+.case__header {
+  /* top padding clears the fixed nav */
+  padding-block: calc(88px + clamp(1rem, 4vw, 2.5rem)) clamp(1rem, 3vw, 2rem);
+}
+
+.case__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  margin-bottom: clamp(1.5rem, 5vw, 3rem);
+  font-weight: 650;
+  text-decoration: none;
+}
+.case__back:hover {
+  text-decoration: underline;
+}
+
+.case__title {
+  font-size: clamp(3rem, 10vw, 7.5rem);
+  font-weight: 850;
+  font-stretch: 75%;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.case__meta {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 2.5rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.case__meta dt {
+  font: 500 0.72rem/1.4 var(--font-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--secondary);
+}
+.case__meta dd {
+  margin: 0.3rem 0 0;
+  font-weight: 600;
+  color: var(--heading);
+}
+
+.case__links {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* ---------- Text sections ---------- */
+.case__body {
+  max-width: 980px;
+  padding-top: clamp(1.5rem, 4vw, 3rem);
+}
+
+.case__section {
+  display: grid;
+  grid-template-columns: minmax(0, 13rem) minmax(0, 1fr);
+  gap: 1rem 3rem;
+  padding-block: clamp(1.75rem, 4vw, 2.5rem);
+  border-top: 1px solid var(--border);
+}
+.case__h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+.case__h2-num {
+  display: block;
+  margin-bottom: 0.4rem;
+  font: 500 0.85rem/1 var(--font-mono);
+  color: var(--accent);
+}
+.case__content {
+  font-size: 1.08rem;
+}
+.case__content > p + p {
+  margin-top: 1rem;
+}
+
+.case__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.7rem;
+}
+.case__list li {
+  position: relative;
+  padding-left: 1.4rem;
+}
+.case__list li::before {
+  content: '';
+  position: absolute;
+  left: 0.2rem;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* ---------- Screenshots ---------- */
+.case__media {
+  padding-block: clamp(1.75rem, 4vw, 2.5rem) clamp(3rem, 8vw, 5rem);
+}
+.case__media > .case__h2 {
+  padding-top: clamp(1.75rem, 4vw, 2.5rem);
+  margin-bottom: 1.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.case__empty {
+  padding: 2.5rem 1.5rem;
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+  color: var(--secondary);
+  font: 500 0.85rem/1.4 var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.case__media figure {
+  margin: 0;
+}
+.case__media figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.92rem;
+  color: var(--secondary);
+}
+
+.case__video {
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem) !important;
+}
+.case__video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  background: var(--hero-bg);
+  box-shadow: var(--shadow);
+}
+
+.case__shots {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+.case__shot-link {
+  display: block;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s var(--ease-out);
+}
+.case__shot-link:hover {
+  transform: translateY(-3px);
+}
+.case__shot {
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- Next project ---------- */
+.case__next {
+  padding-block: clamp(3rem, 8vw, 5rem);
+  background: var(--bg-alt);
+}
+.case__next-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 850;
+  font-stretch: 80%;
+  text-transform: uppercase;
+  color: var(--heading);
+  text-decoration: none;
+}
+.case__next-link svg {
+  color: var(--accent);
+  transition: transform 0.3s var(--ease-out);
+}
+.case__next-link:hover svg {
+  transform: translateX(6px);
+}
+
+@media (max-width: 767px) {
+  .case__meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .case__section {
+    grid-template-columns: 1fr;
+  }
+  .case__shots {
+    grid-template-columns: 1fr;
+  }
+}

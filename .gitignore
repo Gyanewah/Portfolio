@@ -1,0 +1,11 @@
+# Dependencies and build output
+node_modules/
+dist/
+*.local
+
+# Original, unoptimised media (the site uses the optimised copies in public/)
+/images/
+/Screenshot*.png
+
+# Previous version of the site (kept locally only)
+_old/

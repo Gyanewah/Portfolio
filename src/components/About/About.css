@@ -1,0 +1,107 @@
+.about__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(3rem, 7vw, 6rem);
+  align-items: center;
+}
+
+/* ---------- Cartoon card + offset outline frame ---------- */
+.about__visual {
+  --offset: 22px;
+  --radius-card: 24px;
+  position: relative;
+  /* leave room for the outline so it never overflows the column */
+  margin-right: var(--offset);
+  margin-bottom: var(--offset);
+  max-width: 440px;
+}
+
+.about__frame {
+  position: relative;
+  isolation: isolate;
+  margin: 0;
+}
+
+/* The outline: same radius, no fill, offset right + down, sits behind the image */
+.about__frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border: 2px solid var(--accent);
+  border-radius: var(--radius-card);
+  transform: translate(var(--offset), var(--offset));
+  transition: transform 0.45s var(--ease-out);
+}
+
+.about__img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-card);
+  background: var(--bg-alt);
+  box-shadow: var(--shadow);
+  transition: transform 0.45s var(--ease-out), box-shadow 0.45s var(--ease-out);
+}
+
+/* Hover: image lifts, frame drifts a little further out */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .about__visual:hover .about__img {
+    transform: translate(-4px, -4px);
+    box-shadow: 0 2px 4px rgb(36 34 30 / 0.06), 0 20px 44px rgb(36 34 30 / 0.14);
+  }
+  .about__visual:hover .about__frame::before {
+    transform: translate(calc(var(--offset) + 5px), calc(var(--offset) + 5px));
+  }
+}
+
+/* Status badge */
+.about__status {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  color: var(--heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.about__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #3e9b55;
+  box-shadow: 0 0 0 4px rgb(62 155 85 / 0.18);
+  flex: none;
+}
+
+/* ---------- Text ---------- */
+.about__text .section-head {
+  margin-bottom: 1.5rem;
+}
+.about__p {
+  max-width: 38rem;
+  font-size: 1.08rem;
+}
+.about__p + .about__p {
+  margin-top: 1rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 899px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+  .about__visual {
+    --offset: 14px;
+    max-width: 360px;
+  }
+}

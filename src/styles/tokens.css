@@ -1,0 +1,73 @@
+/* Design tokens. Contrast notes (WCAG AA, checked):
+   - text / heading / accent / secondary pass on bg, bg-alt and surface in BOTH themes.
+   - decor-1 / decor-2 / border colours are decoration only (never text).
+   - Light-mode accent (Olive) on the dark hero is 2.4:1 → never use it on --hero-bg.
+   Theme is set by data-theme="light" | "dark" on <html> (see the script in index.html). */
+
+/* ---------- Light (default) ---------- */
+:root {
+  color-scheme: light;
+  --bg: #ebe5dc;          /* White Chocolate */
+  --bg-alt: #e8e2da;      /* Sand */
+  --surface: #ffffff;
+  --border: #d6c9b4;      /* Wood */
+  --border-soft: #d5cdbc; /* Oat */
+  --text: #24221e;        /* Raisin Black */
+  --heading: #31331f;     /* Moss */
+  --accent: #645d3b;      /* Olive */
+  --accent-dark: #31331f; /* Moss – button hover */
+  --secondary: #455763;   /* Navy */
+  --decor-1: #868365;     /* Shadow – decoration only */
+  --decor-2: #919c9d;     /* Morning Blue – decoration only */
+  --on-accent: #ffffff;   /* text on accent / secondary / heading fills */
+  --accent-rgb: 100 93 59; /* for glows */
+
+  --nav-bg: rgb(255 255 255 / 0.82);
+  --nav-bg-strong: rgb(255 255 255 / 0.92);
+  --nav-border: rgb(213 205 188 / 0.8);
+  --caption-bg: rgb(255 255 255 / 0.92);
+
+  /* Hero is dark in both themes */
+  --hero-bg: #24221e;
+  --hero-text: #ebe5dc;    /* 12.7:1 */
+  --hero-muted: #d5cdbc;   /* 10.1:1 */
+  --hero-eyebrow: #d6c9b4; /* 9.7:1 */
+  --hero-btn-text: #31331f;
+
+  --font-sans: 'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+
+  --container: 1200px;
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+  --radius: 20px;
+  --radius-pill: 999px;
+  --shadow: 0 1px 2px rgb(36 34 30 / 0.06), 0 12px 32px rgb(36 34 30 / 0.08);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- Dark ----------
+   Same earthy family, lifted for dark backgrounds (all ≥ 6.4:1). */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #1b1a17;
+  --bg-alt: #22211d;
+  --surface: #2b2925;
+  --border: #3a3730;
+  --border-soft: #35322c;
+  --text: #d5cdbc;        /* Oat        – 11.0:1 */
+  --heading: #ebe5dc;     /* White Choc – 13.9:1 */
+  --accent: #bdb385;      /* light Olive – 8.3:1 */
+  --accent-dark: #d6cfa6; /* hover: lighter still */
+  --secondary: #9db0bc;   /* light Navy – 7.8:1 */
+  --decor-1: #868365;
+  --decor-2: #5f6869;
+  --on-accent: #1b1a17;   /* dark text on the light accent fills – 8.3:1 */
+  --accent-rgb: 189 179 133;
+
+  --nav-bg: rgb(43 41 37 / 0.82);
+  --nav-bg-strong: rgb(43 41 37 / 0.94);
+  --nav-border: rgb(255 255 255 / 0.08);
+  --caption-bg: rgb(27 26 23 / 0.85);
+
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 12px 32px rgb(0 0 0 / 0.35);
+}
