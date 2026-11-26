@@ -18,7 +18,7 @@ JOBS = [
     # Hero (Feature 1)
     ("images/my_profile.jpg", "public/images/hero", "josephine", [640, 960, 1280, 1920], None, None),
     # About cartoon (Feature 5): 4:5
-    ("images/Colored-Pencil African Builders Portrait.png", "public/images/about", "cartoon", [480, 800], 4 / 5, (0.56, 0.5)),
+    ("images/Pencil-Sketched African Builders Classroom.png", "public/images/about", "cartoon", [480, 800], 4 / 5, (0.6, 0.5)),
     # Project covers (Selected work cards): 16:10
     ("images/misslibrary.png", "public/images/work", "miss-library", [800, 1280, 1920], 16 / 10, (0.5, 0.5)),
     (SS + "124053.png", "public/images/work", "choir", [800, 1280], 16 / 10, (0.28, 0.5)),
